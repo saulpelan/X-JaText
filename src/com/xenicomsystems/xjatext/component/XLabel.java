@@ -1,4 +1,4 @@
-package com.xenicomsystems.xjatext.elements;
+package com.xenicomsystems.xjatext.component;
 
 /**
  * @author Saul Pelan
