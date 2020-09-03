@@ -22,16 +22,6 @@ public class XComponent {
 		component.setParent(this);
 	}
 	
-	private void removeComponent(XComponent component) {
-		final XComponent[] components = this.components;
-		this.components = new XComponent[components.length - 1];
-		for (int i = 0; i < this.components.length; i++) {
-			if (components[i] != component) {
-				this.components[i] = components[i];
-			}
-		}
-	}
-
 	public void delete() {
 		XComponent parent = getParent();
 		parent.removeComponent(this);
@@ -77,6 +67,16 @@ public class XComponent {
 
 	public XComponent getParent() {
 		return parent;
+	}
+
+	private void removeComponent(XComponent component) {
+		final XComponent[] components = this.components;
+		this.components = new XComponent[components.length - 1];
+		for (int i = 0; i < this.components.length; i++) {
+			if (components[i] != component) {
+				this.components[i] = components[i];
+			}
+		}
 	}
 
 	/**
